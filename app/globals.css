@@ -99,6 +99,25 @@
         /* padding: 20px; */
     }
 
+    a {
+        color: greenyellow;
+    }
+    a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+    }
+
+    label {
+        @apply block text-green-400 mb-2;
+    }
+
+    .field {
+        @apply mb-2;
+    }
+
+    input {
+        @apply p-2 rounded-md active:ring text-lg text-black w-full w-[300px];
+    }
     ul li::before {
     }
 }

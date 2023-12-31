@@ -6,7 +6,8 @@ type Project = {
     name: "string";
     slug: "string";
     image: "string";
-    url: "string";
+    github_url: "string";
+    live_url: "string";
     content: PortableTextBlock[];
     alt: string;
 };

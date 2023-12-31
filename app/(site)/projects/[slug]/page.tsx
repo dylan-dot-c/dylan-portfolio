@@ -13,13 +13,23 @@ const Project = async ({ params }: { params: { slug: string } }) => {
         <div className='max-w-4xl mx-auto mt-20'>
             <header className='flex justify-between items-center mb-10'>
                 <h1 className='text-6xl '>{project.name}</h1>
-                <a href={project.url}>
-                    <Button
-                        variant='secondary'
-                        className='whitespace-nowrap hover:bg-green-400 hover:text-black transition'>
-                        View Project
-                    </Button>
-                </a>
+
+                <div className='space-x-2'>
+                    <a href={project.live_url}>
+                        <Button
+                            variant='secondary'
+                            className='whitespace-nowrap hover:bg-green-400 hover:text-black transition'>
+                            View Project
+                        </Button>
+                    </a>
+                    <a href={project.github_url}>
+                        <Button
+                            variant='secondary'
+                            className='whitespace-nowrap hover:bg-green-400 hover:text-black transition'>
+                            View Code
+                        </Button>
+                    </a>
+                </div>
             </header>
 
             <Image
@@ -29,7 +39,7 @@ const Project = async ({ params }: { params: { slug: string } }) => {
                 height={200}
             />
             <main>
-                <div className='text-xl whitespace-nowrap text-white'>
+                <div className='text-xl break-all text-white'>
                     <PortableText value={project.content} />
                 </div>
             </main>
